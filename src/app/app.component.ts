@@ -3,8 +3,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-  <input value-emitter tags-capturer class="form-control">
-  <tags-container></tags-container>
+  <tags-container>
+    <input value-emitter tags-capturer class="form-control">
+  </tags-container>
   `,
   styleUrls: ['./app.component.css']
 })

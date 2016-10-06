@@ -4,8 +4,13 @@ import { Subject } from 'rxjs/Subject';
 @Component({
   selector: 'tags-container',
   template: `
-
-  <button (tags)="onTags($event)">Hello</button>
+    <input value-emitter tags-capturer 
+      (tags)="onTags($event)" class="form-control"> 
+    <div>
+      <button *ngFor="let tag of tags$ | async" >
+        {{ tag }}
+      </button>
+    </div>
   `
 })
 export class TagsContainerComponent {
@@ -14,7 +19,7 @@ export class TagsContainerComponent {
   private tags$ = this.tagsSource.asObservable();
 
   onTags(tags: string[]) {
-    console.log(tags);
+    this.tagsSource.next(tags);
   }
 
 

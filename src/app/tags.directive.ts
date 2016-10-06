@@ -30,6 +30,8 @@ export class TagsCapturerDirective {
       return acc;
     }, [])
 
+    console.log(newTags)
+
     this.newTags.emit(newTags);
   }
 
