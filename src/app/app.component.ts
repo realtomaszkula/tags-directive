@@ -2,7 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  template: `
+  <input value-emitter tags-capturer class="form-control">
+  <tags-container></tags-container>
+  `,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {

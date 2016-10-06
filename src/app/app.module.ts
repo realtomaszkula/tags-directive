@@ -5,9 +5,17 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+import { TagsCapturerDirective } from './tags.directive';
+import { ValueEmitterDirective } from './value-emitter.directive';
+import { TagsContainerComponent } from './tags.component';
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, 
+    ValueEmitterDirective,
+    TagsCapturerDirective,
+    TagsContainerComponent
   ],
   imports: [
     BrowserModule,
